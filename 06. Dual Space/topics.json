@@ -1,0 +1,78 @@
+{
+  "topics": [
+    {
+      "topic": "The Dual Space and Linear Forms",
+      "sub_topics": [
+        "The dual space E* of a vector space E, denoted as Hom(E, K), consists of linear maps from E to the field K, where K is the field over which E is defined. Elements of E* are called linear forms or covectors, and the dual space of E* is called the bidual of E (E**).",
+        "Given a vector space E and a basis (ui)i\\u2208I for E, a unique linear form u^i (also denoted as u*i) exists for every i \\u2208 I such that u^i(uj) = 1 if i = j and 0 otherwise. This u^i is called the coordinate form of index i with respect to the basis (ui)i\\u2208I.",
+        "If (u1, ..., un) is a basis of E, then (u^1, ..., u^n) (also denoted as (u*1, ..., u*n)) is a basis of E* called the dual basis. For a basis (u1, ..., un) of R^n (or more generally K^n), it is possible to find the dual basis (u^1, ..., u^n) explicitly, where each u^i is represented by a row vector. If P is the matrix whose jth column is uj, the dual form u*i is given by the ith row of the matrix P-1.",
+        "Given a basis (u1, ..., un) of a finite-dimensional vector space E, and another basis (v1, ..., vn), the change of basis from (u1, ..., un) to (v1, ..., vn) is represented by a matrix P = (aij). The coordinates of a linear form \\u03c6* \\u2208 E* over the dual basis transform covariantly under a change of basis. The new coordinates \\u03c6'i of \\u03c6* are given by \\u03c6'i = \\u03a3j aij \\u03c6j, and the change of basis from the dual basis (u*1, ..., u*n) to (v*1, ..., v*n) is given by (P\\u22121)T.  In tensor notation, vectors are indexed with upper indices (xi), and linear forms are indexed with lower indices (\\u03c6i), with the summation sign omitted (Einstein notation), such as \\u03c6'j = aji\\u03c6i. Linear forms transform covariantly, meaning their coordinates transform in the same direction as the change of basis, leading to the term 'covector'.",
+        "With respect to a basis (e1, ..., en) of E and 1 of K, every linear form f \\u2208 E* can be represented by a 1 \\u00d7 n matrix (\\u03bb1 ... \\u03bbn), where f(ei) = \\u03bbi. A vector u = \\u03a3i=1n xi ei \\u2208 E is represented by an n \\u00d7 1 matrix, and the action of f on u, namely f(u), is represented by the matrix product (\\u03bb1 ... \\u03bbn)(u1 ... un)T = \\u03a3i=1n \\u03bbi ui. With respect to the dual basis (e^1, ..., e^n) of E*, the linear form f is represented by the column vector (\\u03bb1 ... \\u03bbn)T."
+      ]
+    },
+    {
+      "topic": "Pairing and Duality Between Vector Space and its Dual",
+      "sub_topics": [
+        "Given a linear form u* \\u2208 E* and a vector v \\u2208 E, the result u*(v) of applying u* to v is denoted by <u*, v> (also represented as \\u27e8u*, v\\u27e9 or \\u3008u*, v\\u3009), defining a binary operation <-, - >: E* \\u00d7 E \\u2192 K that is bilinear. This is often called the canonical pairing between E* and E, satisfying linearity in each argument: \\u27e8u*1 + u*2, v\\u27e9 = \\u27e8u*1, v\\u27e9 + \\u27e8u*2, v\\u27e9, \\u27e8u*, v1 + v2\\u27e9 = \\u27e8u*, v1\\u27e9 + \\u27e8u*, v2\\u27e9, \\u27e8\\u03bbu*, v\\u27e9 = \\u03bb\\u27e8u*, v\\u27e9, \\u27e8u*, \\u03bbv\\u27e9 = \\u03bb\\u27e8u*, v\\u27e9.",
+        "Given a fixed vector v \\u2208 E, the map evalv: E* \\u2192 K defined by evalv(u*) = <u*, v> is a linear map from E* to K, that is, evalv is a linear form in E**. Similarly, the map evalE: E \\u2192 E** defined by evalE(v) = evalv is a linear map, which is injective and becomes an isomorphism when E has finite dimension.",
+        "A vector v \\u2208 E and a linear form u* \\u2208 E* are orthogonal if <u*, v> = 0. Given a subspace V of E and a subspace U of E*, V and U are orthogonal if <u*, v> = 0 for every u* \\u2208 U and every v \\u2208 V.",
+        "Given a subset V of E, the orthogonal V\\u00b0 of V is the subspace V\\u00b0 of E* defined as V\\u00b0 = {u* \\u2208 E* | <u*, v> = 0 for every v \\u2208 V}; similarly, given a subset U of E*, the orthogonal U\\u00b0 of U is the subspace U\\u00b0 of E defined as U\\u00b0 = {v \\u2208 E | <u*, v> = 0 for every u* \\u2208 U}.",
+        "The subspace V\\u00b0 \\u2286 E* is also called the annihilator of V. V\\u00b0 is the set of linear equations that vanish on V, and U\\u00b0 is the set of common zeros of all linear equations in U. V\\u00b0 = {u* \\u2208 E* | V \\u2286 Ker u*}, and U\\u00b0 = \\u2229u*\\u2208U Ker u*. If V1 \\u2286 V2 \\u2286 E, then V2\\u00b0 \\u2286 V1\\u00b0 \\u2286 E*; if U1 \\u2286 U2 \\u2286 E*, then U2\\u00b0 \\u2286 U1\\u00b0 \\u2286 E; for every subspace V of E, V \\u2286 V\\u00b0\\u00b0; for every subspace U of E*, U \\u2286 U\\u00b0\\u00b0. In finite dimensions, V00 = V. The duality theorem relates the dimensions of V and V0 such that dim(V\\u00b0) = codim(V), and in finite dimensions, V = V\\u00b0\\u00b0."
+      ]
+    },
+    {
+      "topic": "The Duality Theorem and Consequences",
+      "sub_topics": [
+        "For every basis (ui)i\\u2208I of E, the family (u^i)i\\u2208I (also denoted as (u*i)i\\u2208I) of coordinate forms is linearly independent.",
+        "For every subspace V of E, V\\u00b0\\u00b0 = V (also represented as V00 = V).",
+        "For every subspace V of finite codimension m of E, and every subspace W of E such that E = V \\u2295 W (where W is of finite dimension m), for every basis (ui)i\\u2208I of E such that (u1, ..., um) is a basis of W, the family (u^1, ..., u^m) (also denoted as (u*1, ..., u*m)) is a basis of the orthogonal V\\u00b0 of V in E*, so that dim(V\\u00b0) = codim(V).",
+        "For every subspace U of finite dimension m of E*, the orthogonal U\\u00b0 of U in E is of finite codimension m, so that codim(U\\u00b0) = dim(U); furthermore, U\\u00b0\\u00b0 = U (also represented as U00 = U).",
+        "If E is of finite dimension n and (u1, ..., un) is a basis of E, then (u^1, ..., u^n) (also denoted as (u*1, ..., u*n)) is a basis of the dual space E*, called the dual basis of (u1, ..., un).",
+        "The functions E (for equations) and Z (for zeros) are defined as follows: E(V) = V\\u00b0 (also represented as V0) for V \\u2286 E, and Z(U) = U\\u00b0 (also represented as U0) for U \\u2286 E*; then (Z \\u25e6 E)(V) = V\\u00b0\\u00b0 = V (also represented as V00 = V) and (E \\u25e6 Z)(U) = U\\u00b0\\u00b0 = U (also represented as U00 = U), so E and Z are inverse bijections that set up a duality between subspaces of E and subspaces of E*."
+      ]
+    },
+    {
+      "topic": "Hyperplanes and Linear Forms",
+      "sub_topics": [
+        "Given any nonnull linear form f* \\u2208 E*, its kernel H = Ker f* is a hyperplane.",
+        "For any hyperplane H in E, there is a (nonnull) linear form f* \\u2208 E* such that H = Ker f*.",
+        "Given any hyperplane H in E and any (nonnull) linear form f* \\u2208 E* such that H = Ker f*, for every linear form g* \\u2208 E*, H = Ker g* if and only if g* = \\u03bbf* for some \\u03bb \\u2260 0 in K.",
+        "Every subspace V \\u2260 E of a vector space E is the intersection of all hyperplanes that contain V."
+      ]
+    },
+    {
+      "topic": "Transpose of a Linear Map and of a Matrix",
+      "sub_topics": [
+        "Given a linear map f: E \\u2192 F, the transpose fT: F* \\u2192 E* is the linear map defined such that fT(v*) = v* \\u25e6 f for every v* \\u2208 F*.  Equivalently, the linear map fT: F* \\u2192 E* is defined such that <v*, f(u)> = <fT(v*), u> (also represented as \\u27e8v*, f(u)\\u27e9 = \\u27e8fT(v*), u\\u27e9 or (v*, f(u)) = (fT(v*), u)) for all u \\u2208 E and all v* \\u2208 F*.",
+        "The transpose operation satisfies: (f + g)T = fT + gT, (g \\u25e6 f)T = fT \\u25e6 gT, idTE = idE*.",
+        "If f: E \\u2192 F is injective, then fT is surjective; if f: E \\u2192 F is surjective, then fT is injective.",
+        "For any subspace U of a vector space E, if p: E \\u2192 E/U is the canonical surjection onto E/U, then pT is injective and Im(pT) = U\\u00b0 = (Ker(p))\\u00b0 (also represented as U0 = (Ker(p))0); therefore, pT is a linear isomorphism between (E/U)* and U\\u00b0.",
+        "Given a linear map f: E \\u2192 F, for any subspace V of E, f(V)0 = (fT)\\u22121(V0) = {w* \\u2208 F* | fT(w*) \\u2208 V0}.",
+        "Ker fT = (Im f)0 and Ker f = (Im fT)0.",
+        "Given a linear map f: E \\u2192 F, the dual (Im f)* of Im f is isomorphic to Im fT = fT(F*).",
+        "If E and F are finite-dimensional, then the rank of f equals the rank of fT, i.e., rk(f) = rk(fT).",
+        "Im fT = (Ker(f))0.",
+        "The matrix representing the transpose fT: F* \\u2192 E* with respect to the dual bases is the transpose of the matrix representing f: E \\u2192 F."
+      ]
+    },
+    {
+      "topic": "Properties of the Double Transpose",
+      "sub_topics": [
+        "For any linear map f: E \\u2192 F, fTT \\u25e6 evalE = evalF \\u25e6 f, where evalE: E \\u2192 E** and evalF: F \\u2192 F** are the canonical evaluation maps. Equivalently, the following diagram commutes:\\nfTT\\nE\\nF**\\nevalE\\nevalF\\nf\\nF",
+        "If E and F are finite-dimensional, then evalE and evalF are isomorphisms, so fTT = evalF \\u25e6 f \\u25e6 evalE\\u22121 (also represented as fTT = evalF-1 \\u25e6 f \\u25e6 evalE).",
+        "If dim(E) is finite, then Ker(fTT) = evalE(Ker(f))."
+      ]
+    },
+    {
+      "topic": "The Four Fundamental Subspaces",
+      "sub_topics": [
+        "Given a linear map f: E \\u2192 F (where E and F are finite-dimensional), the four spaces Im f, Im fT, Ker f, Ker fT play a special role and are often called the fundamental subspaces associated with f.",
+        "These spaces are related in an intimate manner, since Ker f = (Im fT)\\u00b0 and Ker fT = (Im f)\\u00b0 (also represented as Ker f = (Im fT)0 and Ker fT = (Im f)0). The nullspace of A is the orthogonal of the row space of A, and the left nullspace of A is the orthogonal of the column space of A.",
+        "The column space of A, denoted by Im A or R(A), is the subspace of Rm spanned by the columns of A, which corresponds to the image Im f of f.",
+        "The kernel or nullspace of A, denoted by Ker A or N(A), is the subspace of Rn consisting of all vectors x \\u2208 Rn such that Ax = 0.",
+        "The row space of A, denoted by Im AT or R(AT), is the subspace of Rn spanned by the rows of A, or equivalently, spanned by the columns of AT, which corresponds to the image Im fT of fT.",
+        "The left kernel or left nullspace of A denoted by Ker AT or N(AT) is the kernel (nullspace) of AT, the subspace of Rm consisting of all vectors y \\u2208 Rm such that ATy = 0, or equivalently, yT A = 0."
+      ]
+    }
+  ]
+}

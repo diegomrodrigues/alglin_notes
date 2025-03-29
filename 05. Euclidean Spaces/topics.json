@@ -1,0 +1,93 @@
+{
+  "topics": [
+    {
+      "topic": "Inner Products and Euclidean Spaces",
+      "sub_topics": [
+        "A Euclidean space is a real vector space E equipped with a symmetric bilinear form \\u03c6: E \\u00d7 E \\u2192 R that is positive definite, meaning \\u03c6(u, v) = \\u03c6(v, u) for all vectors u, v in E, and \\u03c6(u, u) > 0 for all non-zero vectors u in E. This structure enhances vector spaces by introducing metric notions such as angles, orthogonality, and length, which are not inherently present in the basic vector space framework.",
+        "The inner product (or scalar product) of two vectors u and v, denoted as \\u03c6(u, v), is a real number that satisfies bilinearity (linearity in each argument), symmetry, and positive definiteness. Bilinearity is expressed as \\u03c6(u1 + u2, v) = \\u03c6(u1, v) + \\u03c6(u2, v) and \\u03c6(\\u03bbu, v) = \\u03bb\\u03c6(u, v). These properties enable the computation of angles and projections, and the definition of a norm ||u|| = \\u221a\\u03c6(u, u) that quantifies the length of a vector.",
+        "The quadratic form associated with the inner product \\u03c6 is a function \\u03a6: E \\u2192 R+ defined as \\u03a6(u) = \\u03c6(u, u), which represents the squared length of the vector u and is used to determine the norm (or length) of vectors in the Euclidean space. The polar form of \\u03a6 is defined by \\u03c6(u, v) = 1/2[\\u03a6(u + v) \\u2013 \\u03a6(u) \\u2013 \\u03a6(v)], allowing the recovery of the bilinear form from the quadratic form.",
+        "The Cauchy-Schwarz inequality states that |\\u03c6(u, v)| \\u2264 \\u221a(\\u03a6(u)\\u03a6(v)) for all vectors u and v in E, with equality holding if and only if u and v are linearly dependent, providing an upper bound for the inner product in terms of the norms of the vectors. The Minkowski inequality states that \\u221a(\\u03a6(u + v)) \\u2264 \\u221a(\\u03a6(u)) + \\u221a(\\u03a6(v)) for all vectors u and v in E, with equality holding if and only if u and v are linearly dependent and u = \\u03bbv for some scalar \\u03bb > 0, establishing the triangle inequality for the Euclidean norm.",
+        "The Gram matrix G, with entries G = (\\u03c6(ei, ej)), is a symmetric positive definite matrix associated with an inner product with respect to a basis (e1,..., en), where its positive definiteness ensures that x^T G x > 0 for all non-zero vectors x in R^n. Conversely, a symmetric positive definite n \\u00d7 n matrix A defines an inner product (x, y) = x^T Ay. A change of basis matrix P transforms the Gram matrix as G' = PTGP, where G' is the Gram matrix with respect to the new basis.",
+        "For matrices A, B \\u2208 Mn(R), the inner product can be defined as (A, B) = tr(ATB), where tr is the trace operator, effectively viewing matrices as long column vectors and using the Euclidean product on R^(n^2). This can also be expressed as tr(BAT). The corresponding norm is the Frobenius norm ||A||F = \\u221a(tr(ATA)).",
+        "The parallelogram law relates the norm to the inner product: ||u + v||\\u00b2 + ||u - v||\\u00b2 = 2(||u||\\u00b2 + ||v||\\u00b2). This law is used to recover the inner product from the norm."
+      ]
+    },
+    {
+      "topic": "Orthogonality and Duality",
+      "sub_topics": [
+        "Orthogonality in Euclidean spaces is defined by the inner product: two vectors u and v are orthogonal if their inner product u \\u00b7 v equals zero, indicating a perpendicular relationship. A family of vectors (ui)i\\u2208I is orthogonal if ui \\u00b7 uj = 0 for all i, j \\u2208 I where i \\u2260 j; and a family is orthonormal if it is orthogonal and ||ui|| = 1 for all i \\u2208 I. If (ui)i\\u2208I is an orthogonal family of nonnull vectors in E, then it is linearly independent.",
+        "Given a Euclidean space E, any two vectors u, v \\u2208 E are orthogonal if and only if ||u + v||\\u00b2 = ||u||\\u00b2 + ||v||\\u00b2.",
+        "The orthogonal complement of a subset F of E, denoted F\\u22a5, is the set of all vectors in E that are orthogonal to every vector in F, forming a subspace of E and providing a means to decompose the space into orthogonal components.",
+        "An inner product on E induces a natural isomorphism between E and its dual space E*, allowing the definition of the adjoint of a linear map in an intrinsic fashion (i.e., independently of bases). The mapping b: E \\u2192 E* defined by b(u) = \\u03c6u, where \\u03c6u(v) = u \\u00b7 v for all v \\u2208 E, is a linear and injective map. When E is finite-dimensional, b is a canonical isomorphism, also known as a musical isomorphism.",
+        "The orthogonal projection of vector v onto the space spanned by u is given by (u \\u00b7 v)u/||u||\\u00b2, useful for decomposing vectors into orthogonal components."
+      ]
+    },
+    {
+      "topic": "Linear Isometries (Orthogonal Transformations)",
+      "sub_topics": [
+        "A linear isometry, or orthogonal transformation, is a linear map f: E \\u2192 F between Euclidean spaces of the same finite dimension n that preserves the Euclidean norm, i.e., ||f(u)|| = ||u|| for all u \\u2208 E. It is also defined as a linear map such that ||f(v) \\u2212 f(u)|| = ||v \\u2013 u||, for all u, v \\u2208 E, focusing on preserving the distance between vectors. These definitions are equivalent due to the linearity of f.",
+        "Given any two nontrivial Euclidean spaces E and F of the same finite dimension n, for every function f: E \\u2192 F, the following properties are equivalent: (1) f is a linear map and ||f(u)|| = ||u||, for all u \\u2208 E; (2) || f(v) \\u2013 f(u)|| = ||v \\u2013 u||, for all u, v \\u2208 E, and f(0) = 0; (3) f(u) \\u00b7 f(v) = u \\u00b7 v, for all u, v \\u2208 E.",
+        "A linear map f: E \\u2192 E is an isometry if and only if f \\u25e6 f* = f* \\u25e6 f = id, where f* is the adjoint of f, indicating that the inverse of an isometry is its adjoint.",
+        "For every orthonormal basis (e1,..., en) of E, if the matrix of f is A, then the matrix of f* is the transpose AT of A, and f is an isometry if and only if A satisfies A AT = AT A = In. The set of all real n \\u00d7 n matrices A is an orthogonal matrix if A^T A = A A^T = In. Given any two orthonormal bases (u1,..., un) and (v1,..., vn), the change of basis matrix P from (u1,..., un) to (v1,..., vn) is orthogonal.",
+        "The isometries of a Euclidean space of dimension n form a group, and that the isometries of determinant +1 form a subgroup; this leads to the definition of the orthogonal group O(n) and the special orthogonal group SO(n)."
+      ]
+    },
+    {
+      "topic": "The Orthogonal Group and Orthogonal Matrices",
+      "sub_topics": [
+        "A real n \\u00d7 n matrix A is defined as an orthogonal matrix if it satisfies the condition A^T A = A A^T = In, where In is the identity matrix, indicating that its columns and rows form orthonormal bases. A linear map f: E \\u2192 E is an isometry if and only if f o f* = f* o f = id.",
+        "Given a Euclidean space E of dimension n, the set of isometries f : E \\u2192 E forms a subgroup of GL(E) denoted by O(E), or O(n) when E = R^n, called the orthogonal group (of E). For every isometry f, we have det(f) = \\u00b11, where det(f) denotes the determinant of f. Isometries with determinant 1 are called rotations or proper isometries, forming a subgroup of the special linear group SL(E) denoted by SO(E) or SO(n), called the special orthogonal group. Isometries with determinant -1 are called improper isometries or flip transformations.",
+        "For every orthonormal basis (e1,...,en) of E, if the matrix of f is A, then the matrix of f* is the transpose AT of A, and f is an isometry if and only if A satisfies the identities A AT = AT A = In, where In denotes the identity matrix of order n, if and only if the columns of A form an orthonormal basis of R^n, if and only if the rows of A form an orthonormal basis of R^n.",
+        "The inverse of an isometry f is its adjoint f*, as shown by A AT = AT A = In."
+      ]
+    },
+    {
+      "topic": "QR-Decomposition for Invertible Matrices",
+      "sub_topics": [
+        "A QR-decomposition of a real n \\u00d7 n matrix A is a factorization A = QR, where Q is an orthogonal matrix and R is an upper triangular matrix. If A is invertible, the QR-decomposition is unique when R is required to have positive diagonal entries, ensuring a stable and well-defined factorization.",
+        "The Gram-Schmidt orthonormalization procedure can be used to produce the QR-decomposition.",
+        "The QR-decomposition yields an efficient and numerically stable method for solving systems of linear equations. Given a system Ax = b, writing A = QR, one obtains Rx = QTb, since Q is orthogonal.",
+        "A somewhat surprising consequence of the QR-decomposition is a famous determinantal inequality due to Hadamard. Hadamard's inequality states that for any real n \\u00d7 n matrix A = (aij), |det(A)| \\u2264 \\u220f(\\u2211aij^2)^(1/2) for the columns and similarly for the rows.",
+        "The Matlab function qr, called by [Q, R] = qr(A), does not necessarily return an upper-triangular matrix whose diagonal entries are positive.",
+        "The Modified Gram-Schmidt method provides better numerical stability for QR-factorization."
+      ]
+    },
+    {
+      "topic": "Existence and Construction of Orthonormal Bases",
+      "sub_topics": [
+        "Any Euclidean space E of finite dimension n \\u2265 1 has an orthonormal basis (u1,..., un).",
+        "Given any nontrivial Euclidean space E of finite dimension n \\u2265 1, from any basis (e1,..., en) for E we can construct an orthonormal basis (u1,..., un) for E, with the property that for every k, 1 \\u2264 k \\u2264 n, the families (e1,..., ek) and (u1,..., uk) generate the same subspace.",
+        "The Gram-Schmidt orthonormalization procedure constructs an orthonormal basis (u1,..., un) from any basis (e1,..., en) for E, with the property that for every k, 1 \\u2264 k \\u2264 n, the families (e1,..., ek) and (u1,..., uk) generate the same subspace. The modified Gram-Schmidt method is a numerically stable variant of the Gram-Schmidt procedure, involving sequential projections.",
+        "Legendre polynomials Pn(x) and Chebyshev polynomials Tn(x) are families of orthogonal polynomials with specific properties, derived using Gram-Schmidt orthonormalization. Legendre polynomials Pn(x) are orthogonal but not always of norm 1; they can be defined using derivatives or inductively and are related to orthonormal polynomials Qn(x) by Qn(x) = \\u221a((2n+1)/2) Pn(x). Chebyshev polynomials Tn(x) = cos(n arccos x) are orthogonal with respect to a specific inner product and play a role in approximation theory."
+      ]
+    },
+    {
+      "topic": "Adjoint of a Linear Map",
+      "sub_topics": [
+        "Given two Euclidean spaces E and F, with inner products denoted by \\u27e8-, -\\u27e91 and \\u27e8-, -\\u27e92 respectively, for any linear map f: E \\u2192 F, there is a unique linear map f*: F \\u2192 E such that \\u27e8f(u), v\\u27e92 = \\u27e8u, f*(v)\\u27e91 for all u \\u2208 E and all v \\u2208 F. For every linear map f: E \\u2192 E, there is a unique linear map f*: E \\u2192 E, called the adjoint of f, such that f*(u) \\u00b7 v = u \\u00b7 f(v) for all u, v \\u2208 E; self-adjoint maps satisfy f = f*.",
+        "The matrix representing the adjoint f* of a linear map f is the transpose of the matrix representing f.",
+        "Self-adjoint linear maps have real eigenvalues, and orthonormal bases arise from their eigenvectors; many physical problems lead to self-adjoint linear maps.",
+        "Linear maps such that f* o f = f o f* are called normal linear maps; normal maps can always be diagonalized over orthonormal bases of eigenvectors, requiring a Hermitian inner product (over C)."
+      ]
+    },
+    {
+      "topic": "The Rodrigues Formula",
+      "sub_topics": [
+        "The exponential map exp: so(3) \\u2192 SO(3) is given by e^A = cos \\u03b8 I3 + (sin \\u03b8/\\u03b8) A + ((1 - cos \\u03b8)/\\u03b8^2) B, where \\u03b8 = \\u221a(a^2 + b^2 + c^2) and B = [[a^2, ab, ac], [ab, b^2, bc], [ac, bc, c^2]].",
+        "Given any rotation matrix R \\u2208 SO(3), if R \\u2260 I and tr(R) \\u2260 \\u22121, then exp^{-1}(R) = (\\u03b8/(2sin \\u03b8)) (R - R^T), where 1 + 2cos \\u03b8 = tr(R).",
+        "The Rodrigues formula can be used to show that the exponential map exp: 50(3) \\u2192 SO(3) is surjective."
+      ]
+    },
+    {
+      "topic": "Applications of Euclidean Geometry",
+      "sub_topics": [
+        "For every real matrix A, there is the QR-decomposition, which says that a real matrix A can be expressed as A = QR, where Q is orthogonal and R is an upper triangular matrix.",
+        "There is also the polar decomposition, which says that a real matrix A can be expressed as A = QS, where Q is orthogonal and S is symmetric positive semidefinite (which means that the eigenvalues of S are nonnegative).",
+        "There is the singular value decomposition, abbreviated as SVD, which says that a real matrix A can be expressed as A = V D U^T, where U and V are orthogonal and D is a diagonal matrix with nonnegative entries.",
+        "The method of least squares consists in finding a solution x minimizing the Euclidean norm ||Ax - b||^2, that is, the sum of the squares of the \\u201cerrors.\\u201d This method is used to solve inconsistent linear systems by minimizing the Euclidean norm ||Ax - b||\\u00b2.",
+        "Euclidean geometry has applications in computational geometry, Voronoi diagrams, and Delaunay triangulations.",
+        "Symmetric matrices have real eigenvalues and can be diagonalized by an orthogonal matrix, leading to the decomposition A = PDP^T, where D is diagonal and P is orthogonal."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "topics": [
+    {
+      "topic": "Singular Value Decomposition and Polar Form",
+      "sub_topics": [
+        "The singular value decomposition (SVD) diagonalizes a linear map f: E \\u2192 E using two orthonormal bases, decomposing the map into rotational and stretching components. The polar form is a related decomposition that separates a linear map into a purely rotational component and a purely stretching part.",
+        "For a linear map f: E \\u2192 E in a Euclidean space, f* o f and f o f* are self-adjoint and positive semidefinite, allowing diagonalization and real, nonnegative eigenvalues. A self-adjoint linear map f: E \\u2192 E with nonnegative eigenvalues is positive semidefinite, and if invertible, it is positive definite, with strictly positive eigenvalues. The spectral theorem states that a self-adjoint map f has real eigenvalues and an orthonormal basis of eigenvectors, enabling the decomposition of any vector u as a linear combination of these eigenvectors.",
+        "Given a linear map f: E \\u2192 F, the square roots \\u03c3i > 0 of the positive eigenvalues of f* o f (and f o f*) are the singular values of f, characterizing the magnitude of the transformation along different orthonormal directions. The nonzero eigenvalues of f* o f and f o f* are the same, indicating a symmetry in how the map and its adjoint interact with vector spaces E and F.",
+        "Given any two Euclidean spaces E and F and a linear map f: E \\u2192 F, the kernel of f equals the kernel of f* o f (Ker f = Ker (f* o f)), and similarly, Ker f* = Ker (f o f*). Also, the kernel of f is the orthogonal complement of the image of f*, and the kernel of f* is the orthogonal complement of the image of f*. For a linear map f: E \\u2192 F, the dimension of the image of f equals the dimension of the image of f* (dim(Im f) = dim(Im f*)), and f, f*, f* o f, and f o f* have the same rank.",
+        "Every square matrix A has a singular value decomposition (SVD) A = VDU\\u2122, where U and V are orthogonal matrices and D is a diagonal matrix with singular values of A as its entries. The columns of U are eigenvectors of A^T A, and the columns of V are eigenvectors of AA^T, connecting singular value decomposition to eigenvalue decomposition.",
+        "The polar form of a linear map and the singular value decomposition (SVD) are two important decompositions that arise from the fact that f*of and fo f* are positive semidefinite self-adjoint linear maps. The polar form has applications in continuum mechanics, where it separates stretching from rotation.",
+        "The early history of SVD is attributed to Beltrami and Camille Jordan, with contributions from Gauss, Sylvester, and Schmidt, leading to a computational method for finding the SVD of a matrix."
+      ]
+    },
+    {
+      "topic": "Singular Value Decomposition for Square and Rectangular Matrices",
+      "sub_topics": [
+        "For every real m \\u00d7 n matrix A, there exist orthogonal matrices U (n \\u00d7 n) and V (m \\u00d7 m) and a diagonal m \\u00d7 n matrix D such that A = VDU\\u1d40, where D is of the form containing the singular values of A. A triple (U, D, V) such that A = VDU\\u2122 is called a singular value decomposition (SVD) of A. If D = diag(\\u03c31,...,\\u03c3p) (with p = min(m, n)), it is customary to assume that \\u03c31 \\u2265 \\u03c32 \\u2265 ... \\u2265 \\u03c3p. Even though the matrix D is an m \\u00d7 n rectangular matrix, since its only nonzero entries are on the descending diagonal, we still say that D is a diagonal matrix. For a complex n \\u00d7 n matrix A, there exist unitary matrices U and V and a diagonal matrix D such that A = VDU*, where the diagonal entries of D are the singular values of A, and the columns of U and V are eigenvectors of A*A and AA*, respectively.",
+        "The columns of U are eigenvectors of A\\u1d40A, and the columns of V are eigenvectors of AA\\u1d40. The nonzero eigenvalues of A\\u1d40A and AA\\u1d40 are the same. (u1,..., ur) is an orthonormal basis of Im AT, (ur+1,..., un) is an orthonormal basis of Ker A, (v1, ..., vr) is an orthonormal basis of Im A, and (vr+1,..., vm) is an orthonormal basis of Ker AT.",
+        "The singular value decomposition (SVD) can be computed using the Matlab command svd(A), which returns the matrices V, D, and U such that A = VDU^T. Some software might use the convention A = UDV\\u1d40.",
+        "The singular value decomposition (SVD) can be used to define the pseudo-inverse of a rectangular matrix, which is crucial for solving optimization problems and least squares problems. SVD also has applications in data compression, where only the singular values with significant magnitudes are retained to represent the data.",
+        "If A is a symmetric matrix and positive semidefinite, it can be decomposed as A = V\\u03a3V^T, where V is an orthogonal matrix and \\u03a3 is a diagonal matrix of nonnegative eigenvalues.",
+        "For every real n \\u00d7 n matrix A, there exist orthogonal matrices U and V and a diagonal matrix D such that A = VDU\\u1d40, where D contains the singular values of A. In the complex case, A = UH, where U is unitary and H is Hermitian positive semidefinite."
+      ]
+    },
+    {
+      "topic": "Polar Decomposition",
+      "sub_topics": [
+        "A pair (R, S) such that A = RS, where R is orthogonal and S is symmetric positive semidefinite, is called a polar decomposition of A. For every real n \\u00d7 n matrix A, there exists an orthogonal matrix R and a positive semidefinite symmetric matrix S such that A = RS; if A is invertible, R and S are unique. In the complex case, the polar decomposition states that for every complex n \\u00d7 n matrix A, there is a unitary matrix U and some positive semidefinite Hermitian matrix H such that A = UH.",
+        "Given an SVD decomposition A = VDU\\u1d40, the polar decomposition can be obtained by letting R = VU\\u1d40 and S = UDU\\u1d40, where R is orthogonal and S is positive semidefinite symmetric, such that RS = VDU\\u1d40 = A. Given a polar decomposition A = RS, where R is orthogonal and S is positive semidefinite symmetric, there exists an orthogonal matrix R\\u2082 and a positive semidefinite diagonal matrix D such that S = R\\u2082D R\\u2082\\u1d40, leading to A = R\\u2081R\\u2082D R\\u2082\\u1d40 = VDU\\u1d40, where V = R\\u2081R\\u2082 and U = R\\u2082 are orthogonal.",
+        "The polar form has applications in continuum mechanics, where it separates stretching from rotation. The orthogonal part Q corresponds to rotation, and the symmetric matrix S corresponds to stretching or compression."
+      ]
+    },
+    {
+      "topic": "Eigenvalues, Singular Values, and Weyl's Inequalities",
+      "sub_topics": [
+        "The eigenvalues and singular values of a matrix are generally unrelated; however, Weyl's inequalities provide bounds on the eigenvalues in terms of the singular values. For a complex n \\u00d7 n matrix A with eigenvalues \\u03bb\\u2081, ..., \\u03bb\\u2099 and singular values \\u03c3\\u2081, ..., \\u03c3\\u2099, listed so that |\\u03bb\\u2081| \\u2265 ... \\u2265 |\\u03bb\\u2099| and \\u03c3\\u2081 \\u2265 ... \\u2265 \\u03c3\\u2099 \\u2265 0, then |\\u03bb\\u2081|...|\\u03bb\\u2099| = \\u03c3\\u2081...\\u03c3\\u2099 and |\\u03bb\\u2081|...|\\u03bb\\u2096| \\u2264 \\u03c3\\u2081...\\u03c3\\u2096, for k = 1, ..., n \\u2212 1."
+      ]
+    },
+    {
+      "topic": "Ky Fan and Schatten Norms",
+      "sub_topics": [
+        "For any matrix A \\u2208 Mm,n(C), with singular values \\u03c3\\u2081 \\u2265 ... \\u2265 \\u03c3q, where q = min{m, n}, the Ky Fan k-norm of A is defined as Nk(A) = \\u03c3\\u2081 + ... + \\u03c3\\u2096 for any k with 1 \\u2264 k \\u2264 q.",
+        "More generally, for any p > 1 and any k with 1 \\u2264 k \\u2264 q, the Ky Fan p-k-norm of A is defined as Nk;p(A) = (\\u03c3\\u2081\\u1d56 + ... + \\u03c3\\u2096\\u1d56)^(1/p).",
+        "When k = q, the Ky Fan norm Nq is given by Nq(A) = \\u03c3\\u2081 + ... + \\u03c3q = tr((A*A)^(1/2)) and is called the trace norm or nuclear norm.",
+        "When p = 2 and k = q, the Ky Fan Nq;2 norm is given by Nk;2(A) = (\\u03c3\\u2081\\u00b2 + ... + \\u03c3q\\u00b2)^(1/2) = \\u221atr(A*A) = ||A||F, which is the Frobenius norm of A.",
+        "The Ky Fan norms N\\u2096 and N\\u2096;p are unitarily invariant norms, and when m = n, they are matrix norms."
+      ]
+    }
+  ]
+}

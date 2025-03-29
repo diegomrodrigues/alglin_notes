@@ -1,0 +1,84 @@
+{
+  "topics": [
+    {
+      "topic": "Eigenvectors and Eigenvalues of a Linear Map",
+      "sub_topics": [
+        "Eigenvalues (\\u03bb) are scalars for a linear map f: E \\u2192 E such that f(u) = \\u03bbu for some nonzero vector u (eigenvector) in the vector space E, indicating that the linear transformation stretches or shrinks the vector u along its direction; equivalently, \\u03bb is an eigenvalue if Ker(\\u03bbid - f) is nontrivial, meaning \\u03bbid - f is not invertible, a condition applicable in finite-dimensional spaces.",
+        "Eigenvectors (u) are nonzero vectors in E that, when acted upon by the linear map f, are scaled by the corresponding eigenvalue \\u03bb, maintaining the same direction; the set of all eigenvectors associated with an eigenvalue \\u03bb, together with the zero vector, forms the eigenspace E\\u03bb(f). Distinct eigenvectors may correspond to the same eigenvalue, but distinct eigenvalues correspond to disjoint sets of eigenvectors. If u\\u2081, ..., um are eigenvectors associated with pairwise distinct eigenvalues \\u03bb\\u2081, ..., \\u03bbm, then the family (u\\u2081, ..., um) is linearly independent.",
+        "The eigenspace E\\u03bb(f) associated with an eigenvalue \\u03bb is the nontrivial subspace Ker(\\u03bbid - f), comprising all eigenvectors associated with \\u03bb, along with the zero vector; eigenvectors are, by definition, nonzero.",
+        "The characteristic polynomial of a linear map f is defined as det(X id \\u2013 f), where X is a scalar variable, and its roots are the eigenvalues of f; for a matrix A, the characteristic polynomial is det(XI \\u2013 A). Given a basis (e1,...,en), the characteristic polynomial \\u03c7f(X) can be computed by expanding the determinant det(XI - A), where A = M(f) is the matrix of f with respect to the given basis; the trace tr(A) is the sum of the diagonal elements of A, and the characteristic polynomial depends only on the linear map f.",
+        "The trace of a matrix A, denoted as tr(A), is the sum of its diagonal elements and is equal to the sum of the eigenvalues of the corresponding linear map f; the determinant of A, denoted as det(A), is the product of its eigenvalues. The eigenvalues of a linear map f are the roots of the characteristic polynomial det(\\u03bbid - f), where id is the identity map. For a square matrix A, the characteristic polynomial is det(\\u03bbI - A); the trace tr(A), which is the sum of the diagonal elements of A, and the determinant det(A) are related to the coefficients of the characteristic polynomial.",
+        "Algebraic multiplicity of an eigenvalue \\u03bb is the number of times it appears as a root of the characteristic polynomial, while the geometric multiplicity is the dimension of the eigenspace E\\u03bb, representing the number of linearly independent eigenvectors associated with \\u03bb; the geometric multiplicity is always less than or equal to the algebraic multiplicity.",
+        "For every eigenvalue \\u03bbi of A, the geometric multiplicity geo(\\u03bbi) is always less than or equal to its algebraic multiplicity alg(\\u03bbi).",
+        "Depending on the field K, the characteristic polynomial \\u03c7A(X) = det(XI \\u2013 A) may or may not have roots in K; algebraically closed fields are fields K such that every polynomial with coefficients in K has all its roots in K. If all roots \\u03bb1, ..., \\u03bbn of the polynomial det(XI \\u2013 A) belong to the field K, then \\u03c7A(X) can be written as (X \\u2212 \\u03bb1)\\u2026\\u2026 (X \\u2013 \\u03bbn); the kth elementary symmetric polynomial \\u03c3k(\\u03bb) of the eigenvalues is used to express the coefficients of the characteristic polynomial. If all roots \\u03bb\\u2081, ..., \\u03bbn of the characteristic polynomial det(XI - A) belong to the field K, then the characteristic polynomial can be written as det(XI - A) = (X - \\u03bb\\u2081) ... (X - \\u03bbn), where the coefficients are elementary symmetric polynomials in the eigenvalues.",
+        "If A is an n\\u00d7n matrix over a field K and all roots of the characteristic polynomial \\u03c7A(X) = det(XI \\u2013 A) belong to K, then det(XI \\u2013 A) = (X \\u2013 \\u03bb1)^k1 ... (X \\u2013 \\u03bbm)^km; the integer ki is the algebraic multiplicity of the eigenvalue \\u03bbi, and the dimension of the eigenspace E\\u03bbi = Ker(\\u03bbiI \\u2013 A) is the geometric multiplicity of \\u03bbi.",
+        "Every linear map f over a complex vector space E must have some (complex) eigenvalue; this can be shown without using determinants by considering the sequence u, f(u), f^2(u), ..., f^n(u) and exploiting linear dependence.",
+        "A linear map f is diagonalizable if E is the direct sum of its eigenspaces E = E\\u03bb1 \\u2295 ... \\u2295 E\\u03bbm; symmetric matrices have real eigenvalues and can be diagonalized.",
+        "A linear map f: E \\u2192 E is diagonalizable if there exists a basis of E with respect to which f is represented by a diagonal matrix D, allowing f(ei) = \\u03bbiei for each basis vector ei, where \\u03bbi is an eigenvalue, indicating scaling along the eigenvector's direction.",
+        "Diagonalizable linear maps or matrices can be expressed in the form A = PDP\\u207b\\u00b9, where D is a diagonal matrix containing the eigenvalues and P is an invertible matrix whose columns are the eigenvectors of A, allowing for simplified computations and analysis. A matrix A is diagonalizable if it can be factored as A = PDP\\u207b\\u00b9, where D is a diagonal matrix of eigenvalues and P is an invertible matrix whose columns are the eigenvectors of A; however, not all matrices are diagonalizable, particularly if they lack a sufficient number of eigenvectors or if their eigenvalues do not belong to the field of coefficients. A matrix A is diagonalizable if and only if the algebraic multiplicity and the geometric multiplicity of every eigenvalue are equal, or equivalently, when the characteristic polynomial has n distinct roots.",
+        "The singular value decomposition (SVD) provides an alternative representation f(ei) = \\u03c3ifi using two orthonormal bases, where \\u03c3i are the singular values of f, offering a method to represent linear maps even when diagonalization is not possible; SVD is detailed further in Chapter 22.",
+        "Gershgorin's disc theorem provides a way to estimate the location of eigenvalues of a matrix A in the complex plane by defining Gershgorin discs centered at the diagonal elements a\\u1d62\\u1d62 with radii equal to the sum of the absolute values of the off-diagonal elements in the i-th row; all eigenvalues of A lie within the union of these discs."
+      ]
+    },
+    {
+      "topic": "Reduction to Upper Triangular Form",
+      "sub_topics": [
+        "Triangularization of a linear map involves finding a basis in which the matrix representation has all zero entries below the main diagonal, simplifying computations and revealing important properties of the map.",
+        "Schur decomposition states that for any linear map f: E \\u2192 E over a complex Hermitian space E, there is an orthonormal basis (u1,...,un) with respect to which f is represented by an upper triangular matrix; equivalently, for every n \\u00d7 n matrix A \\u2208 Mn(C), there is a unitary matrix U and an upper triangular matrix T such that A = UTU*. If A is real and all its eigenvalues are real, then there is an orthogonal matrix Q and a real upper triangular matrix T such that A = QTQT; for any polynomial q(X) \\u2208 K[X], the eigenvalues of q(A) are exactly q(\\u03bb1), ..., q(\\u03bbn), where \\u03bb1,...,\\u03bbn are the eigenvalues of A.",
+        "A square matrix A is an upper triangular matrix if all entries below the main diagonal are zero, i.e., aij = 0 whenever j < i, 1 \\u2264 i, j \\u2264 n. Any linear map f can be represented by an upper triangular matrix in some basis if and only if all the eigenvalues of f belong to the field K.",
+        "Given any finite-dimensional vector space over a field K, a linear map f: E \\u2192 E can be represented by an upper triangular matrix iff all eigenvalues of f belong to K; equivalently, for every n \\u00d7 n matrix A \\u2208 Mn(K), there is an invertible matrix P and an upper triangular matrix T such that A = PTP-1 iff all eigenvalues of A belong to K.",
+        "If A is a Hermitian matrix (A* = A), its eigenvalues are real, and A can be diagonalized with respect to an orthonormal basis of eigenvectors; there exists a unitary matrix U and a real diagonal matrix D such that A = UDU*. If A is a real symmetric matrix (AT = A), its eigenvalues are real, and A can be diagonalized with respect to an orthonormal basis of eigenvectors; there exists an orthogonal matrix Q and a real diagonal matrix D such that A = QDQT.",
+        "For a real matrix A with complex eigenvalues, a version of Theorem 15.6 exists involving only real matrices, provided that T is block upper-triangular, where the diagonal entries may be 2 \\u00d7 2 matrices or real entries.",
+        "Gershgorin's disc theorem can be applied to estimate the location of eigenvalues, providing precise information about their distribution in the complex plane. The Gershgorin domain is the union of all Gershgorin discs."
+      ]
+    },
+    {
+      "topic": "Conditioning of Eigenvalue Problems",
+      "sub_topics": [
+        "The conditioning of the eigenvalue problem is determined by the conditioning number of the change of basis matrix P used to diagonalize the matrix A (A = PDP\\u207b\\u00b9), rather than the condition number of A itself, indicating the sensitivity of eigenvalues to perturbations.",
+        "Bauer-Fike Theorem provides a bound on the change in eigenvalues due to perturbations in the matrix A, stating that for every eigenvalue \\u03bb of A + \\u0394A, there exists an eigenvalue \\u03bb\\u2096 of A such that |\\u03bb - \\u03bb\\u2096| \\u2264 cond(P) ||\\u0394A||, where cond(P) is the condition number of the diagonalizing matrix P and ||\\u0394A|| is the norm of the perturbation matrix.",
+        "For a diagonalizable matrix A \\u2208 Mn(C), if A = PDP\\u207b\\u00b9, where D is a diagonal matrix and P is an invertible matrix, then for every eigenvalue \\u03bb of A + \\u0394A, \\u03bb \\u2208 \\u222a{z \\u2208 C | |z - \\u03bb\\u2096| \\u2264 cond(P) ||\\u0394A||}, where cond(P) is the condition number of P and ||\\u0394A|| is the matrix norm of the perturbation matrix \\u0394A.",
+        "For a diagonalizable matrix A \\u2208 Mn(C) with A = PDP\\u207b\\u00b9, where D = diag(\\u03bb\\u2081, ..., \\u03bbn), and a matrix norm || || such that ||diag(a\\u2081, ..., an)|| = max|ai|, for any perturbation matrix \\u0394A, if Bk = {z \\u2208 C | |z - \\u03bbk| \\u2264 cond(P) ||\\u0394A||}, then every eigenvalue \\u03bb of A + \\u0394A satisfies \\u03bb \\u2208 \\u222aBk.",
+        "The number \\u0393(A) = inf{cond(P) | P-1AP = D} is called the conditioning of A relative to the eigenvalue problem; normal matrices are very well-conditioned with respect to the eigenvalue problem, and for a normal matrix A, every eigenvalue \\u03bb of A + \\u0394A lies within a disk centered at an eigenvalue of A with radius ||\\u0394A||2.",
+        "The conditioning of A relative to the eigenvalue problem is defined as \\u0393(A) = inf{cond(P) | P\\u207b\\u00b9AP = D}; for a normal matrix A, \\u0393(A) = 1, indicating normal matrices are well-conditioned with respect to the eigenvalue problem.",
+        "Normal matrices (A) are well-conditioned with respect to the eigenvalue problem, meaning their eigenvalues are not overly sensitive to small perturbations; for a normal matrix, the conditioning number \\u0393(A) = 1.",
+        "Normal matrices are very well-conditioned with respect to the eigenvalue problem, since they can be diagonalized with a unitary matrix U, for which the spectral norm ||U||\\u2082 = 1.",
+        "For a normal matrix A, every eigenvalue \\u03bb of A + \\u0394A satisfies \\u03bb \\u2208 \\u222a{z \\u2208 C | |z - \\u03bbk| \\u2264 ||\\u0394A||\\u2082}."
+      ]
+    },
+    {
+      "topic": "Eigenvalues of the Matrix Exponential",
+      "sub_topics": [
+        "The eigenvalues of the matrix exponential e\\u1d2c are e^\\u03bb\\u2081, e^\\u03bb\\u2082,..., e^\\u03bb\\u2099, where \\u03bb\\u2081, \\u03bb\\u2082,..., \\u03bb\\u2099 are the eigenvalues of A, linking the spectral properties of A to those of e\\u1d2c.",
+        "If u is an eigenvector of A corresponding to the eigenvalue \\u03bb, then u is also an eigenvector of e\\u1d2c corresponding to the eigenvalue e^\\u03bb, preserving the eigenvector relationship under the exponential transformation.",
+        "The determinant of the matrix exponential e\\u1d2c is equal to e^(tr(A)), where tr(A) is the trace of A, connecting the determinant of e\\u1d2c to the sum of the eigenvalues of A.",
+        "Given any complex n \\u00d7 n matrix A, if \\u03bb1,..., \\u03bbn are the eigenvalues of A, then e\\u03bb1,..., e\\u03bbn are the eigenvalues of eA; furthermore, if u is an eigenvector of A for \\u03bbi, then u is an eigenvector of eA for e\\u03bbi.",
+        "For every complex (or real) square matrix A, the determinant of eA is equal to e^(tr(A)), where tr(A) is the trace of A, i.e., the sum of its diagonal entries.",
+        "For every skew-symmetric matrix B \\u2208 so(n), e^B \\u2208 SO(n), meaning e^B is a rotation. If B is a (real) symmetric matrix, then (e^B)\\u1d40 = e^B, so e^B is also symmetric. Since the eigenvalues \\u03bb\\u2081, ..., \\u03bb\\u2099 of B are real, the eigenvalues of e^B are e^\\u03bb\\u2081, ..., e^\\u03bb\\u2099, and e^\\u03bb\\u1d62 > 0 for i = 1, ..., n, implying that e^B is symmetric positive definite."
+      ]
+    },
+    {
+      "topic": "Location of Eigenvalues",
+      "sub_topics": [
+        "Gershgorin's disc theorem provides information about the location of eigenvalues in the complex plane C; for any complex n \\u00d7 n matrix A, the Gershgorin domain G(A) is the union of discs centered at the diagonal elements aii with radii Ri(A) equal to the sum of the absolute values of the off-diagonal elements in the ith row.",
+        "For a complex n \\u00d7 n matrix A, define Ri(A) = \\u03a3|aij| for j \\u2260 i, which represents the sum of the absolute values of the off-diagonal elements in the i-th row; the Gershgorin domain G(A) is the union of the discs {z \\u2208 C | |z - aii| \\u2264 Ri(A)} for i = 1, ..., n.",
+        "All eigenvalues of A belong to the Gershgorin domain G(A), and if A is strictly row diagonally dominant (i.e., |aii| > \\u03a3|aij| for j \\u2260 i), then A is invertible.",
+        "If A is strictly row diagonally dominant and aii > 0 for all i, then every eigenvalue of A has a strictly positive real part.",
+        "Since A and AT have the same eigenvalues, a version of Gershgorin's theorem exists for the discs of radius Ci(A) = \\u03a3|aij| for i \\u2260 j, and all eigenvalues of A belong to the intersection of the Gershgorin domains G(A) \\u2229 G(AT).",
+        "For any complex n \\u00d7 n matrix A, all eigenvalues of A belong to the intersection of the Gershgorin domains G(A) \\u2229 G(AT); if A is strictly column diagonally dominant, then A is invertible, and if aii > 0 for all i, then every eigenvalue of A has a strictly positive real part.",
+        "A matrix A is Hermitian (A* = A) if and only if its eigenvalues are real and A can be diagonalized with respect to an orthonormal basis of eigenvectors. In matrix terms, there exists a unitary matrix U and a real diagonal matrix D such that A = UDU*."
+      ]
+    },
+    {
+      "topic": "Summary",
+      "sub_topics": [
+        "Key concepts include diagonal matrices, eigenvalues, eigenvectors, eigenspaces, characteristic polynomials, trace, algebraic and geometric multiplicity.",
+        "Eigenspaces associated with distinct eigenvalues form a direct sum.",
+        "Matrices can be reduced to an upper-triangular form using Schur decomposition.",
+        "Gershgorin's discs are useful for locating the eigenvalues of a complex matrix.",
+        "The conditioning of eigenvalue problems is a key consideration.",
+        "Eigenvalues of the matrix exponential are related to the eigenvalues of the original matrix, and det(e\\u1d2c) = e^(tr(A))."
+      ]
+    }
+  ]
+}
